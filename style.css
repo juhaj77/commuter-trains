@@ -1,0 +1,133 @@
+tr:nth-child(even) .timeCell{				
+    
+    background:rgba(48,48,54,.6);
+}
+tr:nth-child(odd) .timeCell{				
+     
+    background:rgba(68, 68, 82, 0.6);
+}
+.row {
+    color:#cce6ff; 
+}
+.timeCell{
+    padding-bottom:0.1em;
+    vertical-align: middle;
+    line-height: 1em;
+    border-bottom-color:black;
+    border-bottom-width:1px;
+    border-bottom-style:solid;
+    border-top-color:black;
+    border-top-width:1px;
+    border-top-style:solid;
+}
+th {
+    background:#595959;
+}
+.container {
+    overflow: hidden;
+    max-width:100%;
+}
+.ending {
+    font-weight:bold;
+    color:#c1f0d9;
+    display:inline-block;
+    text-align:center;
+    width:fit-content;
+    min-width:1em;
+    float:left;
+    padding: 0em 0.2em 0.1em 0.1em;
+    margin: 0.2em 0em 0.2em 0em;
+    border:solid 1px black;
+    background-color:#141f14;
+    background-image: radial-gradient(#334d33 30%,#141f14);
+    border-top-right-radius:0.5em;
+    border-bottom-right-radius:0.5em;
+    text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.starting{	
+    font-weight:bold;	
+    color:#ccf2ff;
+    display:inline-block;
+    width:fit-content;
+    min-width:1em;
+    text-align:center;
+    float:right;
+    padding: 0em 0.1em 0.1em 0.2em;
+    margin: 0.2em 0em 0.2em 0em;
+    border:solid 1px black;
+    background-color:#1b2131;
+    background-image: radial-gradient(#3f4d73 30%,#1b2131);
+    border-top-left-radius:0.5em;
+    border-bottom-left-radius:0.5em;
+    text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+html {
+    height: 100%;
+    background-color:#303036;
+    scroll-behavior: smooth;
+}
+body {
+    line-height: 1em;
+    overflow: hidden;
+    background-color:#303036;
+    transition: opacity 1s;
+    scroll-behavior: smooth;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}
+#parallax {
+    overflow-y: visible;
+    width:100%;
+    height:100vh;
+    text-align:center;
+    background-size: cover;
+    background-repeat:repeat;
+    background-image:url(images/tausta2small.png);
+    transition: background-position-y 1s;
+    transition-timing-function: ease-out;
+    animation-name: backGroundAnim;
+    animation-timing-function:ease-in;
+    animation-duration:500ms;
+}
+@keyframes backGroundAnim {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+#thing {
+    padding-left: 1em;
+    padding-right: 1em;
+    position: relative;
+    height:fit-content;
+    overflow-y:visible;
+    text-align:center;
+    background:rgba(115, 115, 115,0.3);
+    animation-name: backGroundAnim;
+    animation-timing-function:ease-in;
+    animation-duration:500ms;
+    transition: transform 1s;
+    transition-timing-function: ease-out;
+}
+td {
+    height:1.5em;
+    text-align:center;
+    z-index:-10;
+}
+#st{
+    width:4em;
+    border-top-left-radius:14px;
+    border-bottom-left-radius:14px;
+}
+#bottom-left {
+    left: 0;
+    bottom: 0;
+    font-size:.8em;
+    text-align:left;
+    padding-left:0em;
+    padding-bottom:0em;
+    display:none;
+}
+#bottom-left li{
+    line-height:1.3em;
+}
