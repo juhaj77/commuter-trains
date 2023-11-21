@@ -156,8 +156,13 @@ const dispayTrains = arr => {
   const timePeriodArray = timePeriod.split('')
   let timeperiodHtml = ''
   for(i = 0; i < 11; i++){
+    if(i === 2 || i === 5 || i === 8 ){
+      timeperiodHtml += '<div style="width:.5rem;" class="clock">'+
+      timePeriodArray[i]+'</div>'
+    } else {
     timeperiodHtml += '<div class="clock">'+
       timePeriodArray[i]+'</div>'
+    }
   }
   $('#timeperiod').html(timeperiodHtml)
   $('.middle').css({'min-width':`${$('#timeTable').width()}px`})

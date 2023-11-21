@@ -14,9 +14,11 @@ tr:nth-child(odd) .timeCell{
     font-size:1.5rem;
     line-height:1.5rem;
     height:1.5rem;
-    border-radius:.2rem;
-    padding:0 0.1rem 0rem 0.1rem;
-    background:rgba(0,0,0,0.5);
+    width:1rem;
+    text-align: center;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    background:rgba(31, 0, 88, 0.863);
 }
 .timeCell{
     padding:0;
