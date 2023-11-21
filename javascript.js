@@ -119,7 +119,7 @@ const showTrains = arr => {
 }
 
 const createRow = (i,arr) => {                                                        // time table row
-  let row = `<tr id='${i}'><td style='width:1em;padding:0;border-right:solid 1px black;border-spacing: 0px;'>
+  let row = `<tr id='${i}'><td style='width:1em;padding:0em;border-right:solid 1px black;border-spacing: 0px;'>
       <div class='starting'>${arr[i].commuterLineID}</div></td><td class='timeCell' 
       style='padding-left:0.5em;padding-right:0.5em;text-align:center;'>`
   if(arr[i].liveEstimateTime) {
@@ -151,8 +151,15 @@ const dispayTrains = arr => {
   $('#timeTable').html(row)
   $('#timeTable').css({'margin-bottom':'0.2em','margin-top':'0.5em'})
   let time = new Date()
-  $('#timeperiod').html((time.toTimeString().slice(0,5) + ' - ' + 
-  (new Date(time.getTime() + 3600000)).toTimeString().slice(0,5)))
+  const timePeriod = time.toTimeString().slice(0,5) + '\-' + 
+  (new Date(time.getTime() + 3600000)).toTimeString().slice(0,5)
+  const timePeriodArray = timePeriod.split('')
+  let timeperiodHtml = ''
+  for(i = 0; i < 11; i++){
+    timeperiodHtml += '<div class="clock">'+
+      timePeriodArray[i]+'</div>'
+  }
+  $('#timeperiod').html(timeperiodHtml)
   $('.middle').css({'min-width':`${$('#timeTable').width()}px`})
   $('#bottom-left').show()
 }
@@ -252,9 +259,6 @@ const setHeaderFontSize = () => {
     i+=1
     $('#header').css({'font-size':`${hg}px`})
   } while ($('#header').width() >= $('#headerSpace').width())
- 
-  if((Number($('#header').css('font-size').replace('px','')) < 32))  $('#timeperiod').css({'font-size': $('#header').css('font-size')})
-  else $('#timeperiod').css({'font-size': '2em'})
 }
 
 window.addEventListener('resize', setHeaderFontSize)
