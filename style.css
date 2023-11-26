@@ -20,7 +20,7 @@ tr:nth-child(odd) .timeCell{
     border-left: solid 1px rgb(14, 14, 75);
     border-right: solid 1px rgb(14, 14, 75);
     background: rgb(30,30,150);
-    background: linear-gradient(0deg, rgba(30,30,150,1) 0%, rgb(47, 47, 202) 50%, rgba(30,30,150,1) 100%);
+    background: linear-gradient(0deg, rgba(30,30,150,1) 0%, rgba(18, 1, 167, 0.349) 50%, rgba(30,30,150,1) 100%);
     /*background:rgb(30, 30, 150);*/
     /*background:rgba(31, 0, 88, 0.863);*/
 }
